@@ -14,9 +14,10 @@ border-radius: 0.8rem;
 box-shadow: 3px 3px 6px rgba(0,0,0,0.3), 3px 3px 4px rgba(0,0,0,0.2);
 
 @media (max-width: 900px) {
-    margin: 2.5%;
+    margin: 2vh auto;
     padding: 2%;
-    width: 80%;
+    width: 80vw;
+    height: 40vh;
     display: block;
     
   }
@@ -65,12 +66,13 @@ const PieChart = () => {
             <Pie 
             data={chartData} 
             options={{
-                maintainAspectRatio: true,
+                maintainAspectRatio: false,
                 responsive: true,
                 title: {text: 'Languages', fontSize: 20, fontColor: 'white', display: true},
                 legend: {
                     labels: {
-                        fontColor: '#fafafa'
+                        fontColor: '#fafafa',
+                        fontSize: 10,
                     }
                 },
                 layout: {

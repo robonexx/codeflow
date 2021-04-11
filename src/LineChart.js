@@ -14,9 +14,10 @@ border-radius: 0.8rem;
 box-shadow: 3px 3px 6px rgba(0,0,0,0.3), 3px 3px 4px rgba(0,0,0,0.2);
 
 @media (max-width: 900px) {
-    margin: 2.5%;
+    margin: 2vh auto;
     padding: 2%;
-    width: 80%;
+    width: 80vw;
+    height: 40vh;
     display: block;
     
   }
@@ -81,16 +82,17 @@ const LineChart = () => {
             <Line 
             data={chartData}
             options={{
-                maintainAspectRatio: true,
+                maintainAspectRatio: false,
                 responsive: true,
                 title: {text: 'Commits / week', fontColor: 'white', fontSize: 20, display: true},
                 legend: {
                     labels: {
-                        fontColor: '#e1e2e3'
+                        fontColor: '#e1e2e3',
+                        fontSize: 10,
                     }
                 },
                 layout: {
-                    padding: 5
+                    padding: {left: 2, right: 2, top: 0, bottom: 0}
                 },
                 scales: {
                     yAxes: [
