@@ -1,9 +1,10 @@
 .App {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  width: 100vw;
 
 }
 

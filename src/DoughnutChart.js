@@ -4,18 +4,16 @@ import styled from 'styled-components'
 
 
 const StyledChart = styled.div`
-width: 30%;
-height: 40%;
+width: 40vw;
+height: 50vh;
 /* background: #f2f2f9; */
 background: #212124;
-margin: 1rem;
-padding: 0.5rem;
+margin: 1rem 0;
 border-radius: 0.8rem;
 box-shadow: 3px 3px 6px rgba(0,0,0,0.3), 3px 3px 4px rgba(0,0,0,0.2);
 
 @media (max-width: 900px) {
     margin: 2vh auto;
-    padding: 2%;
     width: 80vw;
     height: 40vh;
     display: block;
