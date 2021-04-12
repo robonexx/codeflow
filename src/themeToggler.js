@@ -16,21 +16,21 @@ const Button = styled.button`
   background: transparent;
   color: ${({ theme }) => theme.btnColor};
   background: ${({theme}) => theme.bgBtn};
-  width: 3rem;
-  height: 3rem;
+  width: 2.4rem;
+  height: 2.4rem;
   border-radius: 50%;
   border:none;
   cursor: pointer;
   padding: 0.3rem;
   position: fixed;
-  top: 2vh;
-  right: 1vw;
+  top: 1.5vh;
+  right: 2vw;
   z-index: 50;
   outline: none;
 
   @media (max-width: 900px) {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2rem;
+    height: 2rem;
   }
 `;
 

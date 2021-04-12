@@ -1,11 +1,11 @@
-import LineChart from './LineChart'
-import BarChart from './BarChart'
-import PieChart from './PieChart'
-import DoughChart from './DoughnutChart'
 import './App.css';
-
-import NavBar from './NavBar'
-
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+/* import NavBar from './NavBar' */
+import Header from './header'
+import Dashboard from './pages/Dashboard'
+import Charts from './pages/Charts'
+import Message from './pages/Message'
+import Work from './pages/Work'
 import {ThemeProvider} from "styled-components";
 import  {useDarkMode} from './UseDarkMode'
 import { GlobalStyles } from './GlobalStyles'
@@ -21,18 +21,23 @@ function App() {
 
 
   return (
+    <Router>
     <div className="App">
      <ThemeProvider theme={themeMode}>
           <ThemeToggler theme={theme} toggleTheme={themeToggle} />
             <GlobalStyles/>
-     <h1>MY CHARTS TRAINING</h1>
-     <NavBar />
-     <LineChart />
-     <BarChart />
-     <PieChart/>
-     <DoughChart />
+            <Header />
+            <Switch>
+                    <Route exact path="/" component={Dashboard} />
+                    <Route exact path="/charts" component={Charts} />
+                    <Route exact path="/message" component={Message} />
+                    <Route exact path="/work" component={Work} />
+                  </Switch>
+    {/*  <NavBar /> */}
+    
      </ThemeProvider>
     </div>
+    </Router>
   );
 }
 

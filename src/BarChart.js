@@ -4,11 +4,12 @@ import styled from 'styled-components'
 
 
 const StyledChart = styled.div`
-width: 40vw;
-height: 50vh;
+width: 30vw;
+height: 40vh;
 background: #f2f2f9;
 /* background: #212124; */
-margin: 1rem 0;
+color: ${({ theme }) => theme.text};
+margin: 10rem 10rem;
 border-radius: 0.8rem;
 box-shadow: 3px 3px 6px rgba(0,0,0,0.3), 3px 3px 4px rgba(0,0,0,0.2);
 
@@ -95,7 +96,7 @@ const BarChart = () => {
                 responsive: true,
                 title: {text: 'Daily hours', display: true},
                 layout: {
-                    padding: 5
+                    padding: 10
                 },
                 scales: {
                     yAxes: [

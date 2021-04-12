@@ -9,7 +9,6 @@ import {Work} from '@styled-icons/material/Work'
 const HomeBtn = styled(Home)`
 width: 2.4rem;
 height: 2.4rem;
-/* background: -webkit-linear-gradient(#282828, #121212, #282828); */
 color: #f2f2f3;
 
 &:hover {
@@ -117,7 +116,7 @@ padding: 5rem 2rem;
 }
 `
 
-const NavBar = () => {
+const Navbar = () => {
     return (  
             <>
                 <Nav>
@@ -132,4 +131,4 @@ const NavBar = () => {
     );
 }
  
-export default NavBar;
+export default Navbar;
