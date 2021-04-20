@@ -69,7 +69,7 @@ background-color: ${({theme}) => theme.body};
     }
 `
 
-const Koti = () => {
+const Home = () => {
 
     const [theme, themeToggle] = useDarkMode();
     const [username, setUsername] = useState("robonexx");
@@ -161,4 +161,4 @@ const Koti = () => {
      );
 }
  
-export default Koti;
+export default Home;
