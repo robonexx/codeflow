@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 /* import Header from './components/header' */
 import Home from './pages/Home'
 import Landing from './pages/Landing'
-/* import Koti from './pages/Koti'  */
+import Koti from './pages/Koti'  
 import Login from './pages/Login' 
 import Charts from './pages/Charts'
 /*
