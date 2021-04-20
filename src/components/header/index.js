@@ -70,12 +70,14 @@ const loadData = async () => {
     .then(data => setData(data));
 }
 
-  const isDesktopOrLaptop = useMediaQuery({
-        query: '(min-width: 899px)'
-    })
-    const isMobileOrTablet = useMediaQuery({
-        query: '(max-width : 900px)'
-    }) 
+const isDesktopOrLaptop = useMediaQuery({
+
+    query: '(min-width: 899px)'
+})
+const isMobileOrTablet = useMediaQuery({
+    
+    query: '(max-width : 900px)'
+}) 
 
     return ( 
         <Content key={data.id}>
