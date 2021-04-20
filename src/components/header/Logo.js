@@ -19,7 +19,7 @@ z-index: 20;
 const Logo = () => {
     return ( 
         <>
-        <Title>[Kriːeɪˈtɪv WorkFlow]</Title>
+        <Title>[Kriːeɪˈtɪv Code-Flow]</Title>
         </>
      );
 }
