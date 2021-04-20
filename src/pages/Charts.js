@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import LineChart from '../LineChart'
-import BarChart from '../BarChart'
-import PieChart from '../PieChart'
-import DoughChart from '../DoughnutChart'
+import LineChart from '../components/charts/LineChart'
+import BarChart from '../components/charts/BarChart'
+import PieChart from '../components/charts/PieChart'
+import DoughChart from '../components/charts/DoughnutChart'
 
 
 
@@ -22,19 +22,17 @@ align-items: center;
 @media (max-width: 900px) {
     margin: 0;
     width: 100vw;
-    
-    
+     
   }
 `
 const Content = styled.div`
-width: 100%;
+width: 100vw;
 display: flex;
 flex-flow: row wrap;
 justify-content: center;
 
 @media (max-width: 900px) {
-    margin: 3vh 0 0 06vw;
-    width: 90vw;
+    padding: 3vh 0 0 6vw;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -97,7 +97,7 @@ const LineChart = () => {
                         {
                         ticks: {
                     autoSkip: true,
-                    maxTicksLimit: 10,
+                    maxTicksLimit: 20,
                     beginAtZero: true
                 },
                 gridLines: {

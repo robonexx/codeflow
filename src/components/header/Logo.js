@@ -3,12 +3,13 @@ import styled from 'styled-components'
 
 
 const Title = styled.h1`
-margin-left: 10vw;
+margin-left: 0vw;
+width: 100%;
 font-weight: 200;
 letter-spacing: 2px;
 font-size: 2rem;
 color: ${({ theme }) => theme.text};
-filter: drop-shadow(3px 3px 2px #c1c1c1);
+filter: drop-shadow(2px 2px 2px #c1c1c1);
 z-index: 20;
 
 @media (max-width: 900px) {
@@ -18,7 +19,7 @@ z-index: 20;
 const Logo = () => {
     return ( 
         <>
-        <Title>[B-E-V]</Title>
+        <Title>[Kriːeɪˈtɪv WorkFlow]</Title>
         </>
      );
 }

@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
-import { Doughnut } from 'react-chartjs-2'
+import { Pie } from 'react-chartjs-2'
 import styled from 'styled-components'
+import { getLanguageData} from '../../config/github'
 
 
 const StyledChart = styled.div`
 width: 30vw;
 height: 40vh;
-/* background: #f2f2f9; */
-background: #212124;
-color: ${({ theme }) => theme.text};
+background: #f2f2f9;
+/* background: #212124; */
 margin: 10rem 10rem;
 border-radius: 0.8rem;
 box-shadow: 3px 3px 6px rgba(0,0,0,0.3), 3px 3px 4px rgba(0,0,0,0.2);
@@ -22,60 +22,59 @@ box-shadow: 3px 3px 6px rgba(0,0,0,0.3), 3px 3px 4px rgba(0,0,0,0.2);
   }
 `
 
-const DoughChart = () => {
+const PieChart = (props) => {
 
     const [chartData, setChartData ] = useState({})
 
     
+
     const chart = () => {
 
-        fetch(`https://api.github.com/repos/robonexx/vga/languages`)
-            .then(res => {
-                return res.json()
-            })
-            .then(json => {
-    
-        setChartData({
-                data: false,
-                labels: Object.keys(json),
-                datasets: [{
-                    label: '# of Votes',
-                    data: Object.values(json),
-                    backgroundColor: [
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            })
+    fetch(`https://api.github.com/repos/robonexx/rupertofolio/languages`)
+        .then(res => {
+            return res.json()
         })
-    }
-    
-       useEffect(() => {
-        chart()
-       }, [])
+        .then(json => {
+
+    setChartData({
+            labels: Object.keys(json),
+            datasets: [{
+                label: '# of Votes',
+                data: Object.values(json),
+                backgroundColor: [
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        })
+    })
+}
+
+   useEffect(() => {
+    chart()
+   }, [])
 
     return ( 
         <>
         <StyledChart>
-            <Doughnut 
+            <Pie 
             data={chartData} 
             options={{
                 maintainAspectRatio: false,
                 responsive: true,
-                title: {text: 'Languages', fontSize: 20, fontColor: 'white', display: true},
+                title: {text: 'Languages', fontSize: 20, display: true},
                 legend: {
                     labels: {
-                        fontColor: '#fafafa',
                         fontSize: 10,
                     }
                 },
                 layout: {
-                    padding: 10
+                    padding: 20
                 },
                 scales: {
                     yAxes: [
@@ -87,7 +86,7 @@ const DoughChart = () => {
                 },
                 gridLines: {
                     display: false
-                },
+                }
                 }],
                 xAxes: [
                     {
@@ -103,4 +102,4 @@ const DoughChart = () => {
      );
 }
  
-export default DoughChart;
+export default PieChart;

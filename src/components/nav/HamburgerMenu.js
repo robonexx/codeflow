@@ -76,7 +76,7 @@ function HamburgerMenu({ isOpen }) {
 
     <Ul isOpen={isOpen}  >
                 <div>
-                <Link to="/">Dashboard</Link>
+                <Link to="/">Home</Link>
                 <Link to="/charts">Charts</Link>
                 <Link to="/message">Message</Link>
                 <Link to="/work">Work</Link>
